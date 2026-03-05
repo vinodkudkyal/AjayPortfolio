@@ -511,7 +511,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-full opacity-30 group-hover:opacity-50 blur-2xl transition-all duration-500 animate-pulse-slow"></div>
                 <div className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl transform group-hover:scale-105 transition-all duration-500">
                   <img
-                    src="./src/assets/profile.jpeg"
+                    src={profile}
                     alt="Ajay Tukaram Yangal"
                     className="w-full h-full object-cover"
                   />
