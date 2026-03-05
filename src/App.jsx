@@ -7,6 +7,18 @@ import {
   Menu, Download, ArrowUpRight, Quote, Eye, Home, User, Code, Mail as MailIcon
 } from 'lucide-react';
 
+import resume from './assets/resume.pdf';
+import profile from './assets/profile.jpeg';
+
+import realme from './assets/realme.png';
+import redmi from './assets/redmi.png';
+import poco from './assets/poco.png';
+import lava from './assets/lava.png';
+import nothing from './assets/nothing.png';
+import pocoF7 from './assets/poco_f7.png';
+import samsung from './assets/samsung.png';
+import vivo from './assets/vivo.png';
+
 const Portfolio = () => {
   const [selectedCase, setSelectedCase] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -82,7 +94,7 @@ const Portfolio = () => {
     try {
       // Path to resume file (adjust based on your actual file)
       // const resumePath = './src/assets/resume.pdf'; // or .doc, .docx
-      const resumePath = './assets/resume.pd';
+      const resumePath = resume;
       
       // Create a link element
       const link = document.createElement('a');
@@ -136,7 +148,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
       id: 1,
       title: 'Realme P4 Power', 
       result: 'Ranked on Page 1 within 2 HOURS of publishing.',
-      img: '/assets/realme.png',
+      img: realme,
       details: 'This article leveraged trending keywords and optimized structure to achieve lightning-fast rankings. The content focused on user intent and included high-value technical specifications that Google prioritized.',
       metrics: { time: '2 hours', position: '#1', traffic: '+450%', shares: '127' }
     },
@@ -144,7 +156,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
       id: 2,
       title: 'Redmi Note 15 Pro+', 
       result: 'Top result within 7 HOURS.',
-      img: '/assets/redmi.png',
+      img: redmi,
       details: 'Comprehensive comparison with competitor devices, optimized meta descriptions, and strategic internal linking helped this article dominate search results within hours.',
       metrics: { time: '7 hours', position: '#1', traffic: '+320%', shares: '89' }
     },
@@ -152,7 +164,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
       id: 3,
       title: 'POCO M6 Pro', 
       result: 'Successfully ranked using on-page optimization and keyword strategy.',
-      img: '/assets/poco.png',
+      img: poco,
       details: 'In-depth keyword research revealed high-intent search terms. The article was structured with proper header tags, featured snippets optimization, and multimedia elements.',
       metrics: { time: '3 days', position: '#3', traffic: '+280%', shares: '156' }
     },
@@ -160,7 +172,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
       id: 4,
       title: 'Lava Agni 4', 
       result: 'Ranking achieved through Google Discover optimization.',
-      img: '/assets/lava.png',
+      img: lava,
       details: 'Optimized for Google Discover with eye-catching featured images, trending topics, and engaging headlines that drove significant organic traffic.',
       metrics: { time: '1 day', position: '#2', traffic: '+520%', shares: '203' }
     },
@@ -168,7 +180,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
       id: 5,
       title: 'Nothing Phone 3a', 
       result: 'SEO optimized content ranked organically.',
-      img: '/assets/nothing.png',
+      img: nothing,
       details: 'Clean, authoritative content with proper schema markup and mobile optimization helped this article gain Google\'s trust and rank organically.',
       metrics: { time: '5 days', position: '#4', traffic: '+195%', shares: '67' }
     },
@@ -176,7 +188,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
       id: 6,
       title: 'POCO F7', 
       result: 'Achieved ranking through competitor analysis.',
-      img: '/assets/poco_f7.png',
+      img: pocoF7,
       details: 'Analyzed top-ranking competitor content and created a superior, more comprehensive guide that outperformed existing articles in depth and quality.',
       metrics: { time: '2 days', position: '#2', traffic: '+310%', shares: '142' }
     },
@@ -184,7 +196,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
       id: 7,
       title: 'Samsung M36', 
       result: 'Organic ranking improvement through technical SEO.',
-      img: '/assets/samsung.png',
+      img: samsung,
       details: 'Technical SEO improvements including page speed optimization, structured data, and improved internal linking structure boosted rankings significantly.',
       metrics: { time: '1 week', position: '#5', traffic: '+175%', shares: '94' }
     },
@@ -192,7 +204,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
       id: 8,
       title: 'Vivo Y400', 
       result: 'Achieved search visibility via structured content. Multiple articles ranked simultaneously.',
-      img: '/assets/vivo.png',
+      img: vivo,
       details: 'Created a content cluster around the topic with pillar page and supporting articles, dominating search results with multiple rankings on first page.',
       metrics: { time: '4 days', position: '#1, #3, #7', traffic: '+680%', shares: '278' }
     }
@@ -499,7 +511,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-full opacity-30 group-hover:opacity-50 blur-2xl transition-all duration-500 animate-pulse-slow"></div>
                 <div className="relative w-72 h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white shadow-2xl transform group-hover:scale-105 transition-all duration-500">
                   <img
-                    src="/assets/profile.jpeg"
+                    src="./src/assets/profile.jpeg"
                     alt="Ajay Tukaram Yangal"
                     className="w-full h-full object-cover"
                   />
