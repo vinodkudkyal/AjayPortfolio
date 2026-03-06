@@ -8,7 +8,9 @@ import {
 } from 'lucide-react';
 
 import resume from './assets/resume.pdf';
-import profile from './assets/profile.jpeg';
+// import profile from './assets/profile.jpeg';
+// import profile from './assets/profile1.jpeg';
+import profile from './assets/profile2.jpeg';
 
 import realme from './assets/realme.png';
 import redmi from './assets/redmi.png';
@@ -225,7 +227,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
   const achievements = [
     { number: '300+', label: 'Blog Articles Written', icon: <FileText size={24} /> },
     { number: '100+', label: 'Tech Articles', icon: <Zap size={24} /> },
-    { number: '80+', label: 'Articles on TechSCR', icon: <Globe size={24} /> },
+    { number: '100+', label: 'Articles on TechSCR', icon: <Globe size={24} /> },
     { number: '15+', label: 'First Page Rankings', icon: <Award size={24} /> }
   ];
 
@@ -706,7 +708,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                       <FileText size={20} className="text-green-700" />
                     </div>
                     <div>
-                      <span className="font-bold text-green-700">80+ technology articles</span>
+                      <span className="font-bold text-green-700">100+ technology articles</span>
                       <p className="text-slate-600 text-sm">on TechSCR.com with multiple first-page Google rankings</p>
                     </div>
                   </div>
