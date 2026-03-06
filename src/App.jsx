@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { 
-  Mail, Phone, MapPin, Globe, ExternalLink, Award, Briefcase, 
-  BookOpen, ChevronRight, X, TrendingUp, Target, Zap, 
+import {
+  Mail, Phone, MapPin, Globe, ExternalLink, Award, Briefcase,
+  BookOpen, ChevronRight, X, TrendingUp, Target, Zap,
   Star, Clock, Search, FileText, Users, Layers, Sparkles,
   Menu, Download, ArrowUpRight, Quote, Eye, Home, User, Code, Mail as MailIcon
 } from 'lucide-react';
@@ -28,7 +28,7 @@ const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [downloadStatus, setDownloadStatus] = useState('idle'); // idle, loading, success, error
-  
+
   // Refs for sections
   const homeRef = useRef(null);
   const experienceRef = useRef(null);
@@ -97,7 +97,7 @@ const Portfolio = () => {
       // Path to resume file (adjust based on your actual file)
       // const resumePath = './src/assets/resume.pdf'; // or .doc, .docx
       const resumePath = resume;
-      
+
       // Create a link element
       const link = document.createElement('a');
       link.href = resumePath;
@@ -105,9 +105,9 @@ const Portfolio = () => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
+
       setDownloadStatus('success');
-      
+
       // Reset status after 3 seconds
       setTimeout(() => {
         setDownloadStatus('idle');
@@ -115,7 +115,7 @@ const Portfolio = () => {
     } catch (error) {
       console.error('Download failed:', error);
       setDownloadStatus('error');
-      
+
       // Reset status after 3 seconds
       setTimeout(() => {
         setDownloadStatus('idle');
@@ -146,65 +146,65 @@ Some of my content has also been featured in Google AI Overviews, highlighting t
 Through my experience, I focus on creating clear, structured, and engaging content that is optimized for search rankings, reader experience, and long-term organic growth.`;
 
   const caseStudies = [
-    { 
+    {
       id: 1,
-      title: 'Realme P4 Power', 
+      title: 'Realme P4 Power',
       result: 'Ranked on Page 1 within 2 HOURS of publishing.',
       img: realme,
       details: 'This article leveraged trending keywords and optimized structure to achieve lightning-fast rankings. The content focused on user intent and included high-value technical specifications that Google prioritized.',
       metrics: { time: '2 hours', position: '#1', traffic: '+450%', shares: '127' }
     },
-    { 
+    {
       id: 2,
-      title: 'Redmi Note 15 Pro+', 
+      title: 'Redmi Note 15 Pro+',
       result: 'Top result within 7 HOURS.',
       img: redmi,
       details: 'Comprehensive comparison with competitor devices, optimized meta descriptions, and strategic internal linking helped this article dominate search results within hours.',
       metrics: { time: '7 hours', position: '#1', traffic: '+320%', shares: '89' }
     },
-    { 
+    {
       id: 3,
-      title: 'POCO M6 Pro', 
+      title: 'POCO M6 Pro',
       result: 'Successfully ranked using on-page optimization and keyword strategy.',
       img: poco,
       details: 'In-depth keyword research revealed high-intent search terms. The article was structured with proper header tags, featured snippets optimization, and multimedia elements.',
       metrics: { time: '3 days', position: '#3', traffic: '+280%', shares: '156' }
     },
-    { 
+    {
       id: 4,
-      title: 'Lava Agni 4', 
+      title: 'Lava Agni 4',
       result: 'Ranking achieved through Google Discover optimization.',
       img: lava,
       details: 'Optimized for Google Discover with eye-catching featured images, trending topics, and engaging headlines that drove significant organic traffic.',
       metrics: { time: '1 day', position: '#2', traffic: '+520%', shares: '203' }
     },
-    { 
+    {
       id: 5,
-      title: 'Nothing Phone 3a', 
+      title: 'Nothing Phone 3a',
       result: 'SEO optimized content ranked organically.',
       img: nothing,
       details: 'Clean, authoritative content with proper schema markup and mobile optimization helped this article gain Google\'s trust and rank organically.',
       metrics: { time: '5 days', position: '#4', traffic: '+195%', shares: '67' }
     },
-    { 
+    {
       id: 6,
-      title: 'POCO F7', 
+      title: 'POCO F7',
       result: 'Achieved ranking through competitor analysis.',
       img: pocoF7,
       details: 'Analyzed top-ranking competitor content and created a superior, more comprehensive guide that outperformed existing articles in depth and quality.',
       metrics: { time: '2 days', position: '#2', traffic: '+310%', shares: '142' }
     },
-    { 
+    {
       id: 7,
-      title: 'Samsung M36', 
+      title: 'Samsung M36',
       result: 'Organic ranking improvement through technical SEO.',
       img: samsung,
       details: 'Technical SEO improvements including page speed optimization, structured data, and improved internal linking structure boosted rankings significantly.',
       metrics: { time: '1 week', position: '#5', traffic: '+175%', shares: '94' }
     },
-    { 
+    {
       id: 8,
-      title: 'Vivo Y400', 
+      title: 'Vivo Y400',
       result: 'Achieved search visibility via structured content. Multiple articles ranked simultaneously.',
       img: vivo,
       details: 'Created a content cluster around the topic with pillar page and supporting articles, dominating search results with multiple rankings on first page.',
@@ -240,14 +240,13 @@ Through my experience, I focus on creating clear, structured, and engaging conte
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-50 font-sans text-slate-800 selection:bg-blue-200 relative">
-      
+
       {/* Navigation Bar */}
-      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-white/90 backdrop-blur-lg shadow-lg py-3' : 'bg-transparent py-6'
-      }`}>
+      <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? 'bg-white/90 backdrop-blur-lg shadow-lg py-3' : 'bg-transparent py-6'
+        }`}>
         <div className="max-w-6xl mx-auto px-6 flex justify-between items-center">
           {/* Logo */}
-          <button 
+          <button
             onClick={() => scrollToSection('home')}
             className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent hover:scale-105 transition-transform"
           >
@@ -260,19 +259,17 @@ Through my experience, I focus on creating clear, structured, and engaging conte
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`relative group flex items-center gap-2 px-3 py-2 rounded-lg transition-all ${
-                  activeSection === item.id 
-                    ? 'text-blue-600 bg-blue-50' 
+                className={`relative group flex items-center gap-2 px-3 py-2 rounded-lg transition-all ${activeSection === item.id
+                    ? 'text-blue-600 bg-blue-50'
                     : 'text-slate-600 hover:text-blue-600 hover:bg-blue-50/50'
-                }`}
+                  }`}
               >
-                <span className={`transition-transform group-hover:scale-110 ${
-                  activeSection === item.id ? 'text-blue-600' : ''
-                }`}>
+                <span className={`transition-transform group-hover:scale-110 ${activeSection === item.id ? 'text-blue-600' : ''
+                  }`}>
                   {item.icon}
                 </span>
                 <span className="font-medium">{item.label}</span>
-                
+
                 {/* Active indicator */}
                 {activeSection === item.id && (
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full"></span>
@@ -285,15 +282,14 @@ Through my experience, I focus on creating clear, structured, and engaging conte
           <button
             onClick={handleDownloadResume}
             disabled={downloadStatus === 'loading'}
-            className={`hidden md:flex items-center gap-2 px-6 py-2.5 rounded-full font-medium transition-all hover:scale-105 shadow-lg ${
-              downloadStatus === 'loading'
+            className={`hidden md:flex items-center gap-2 px-6 py-2.5 rounded-full font-medium transition-all hover:scale-105 shadow-lg ${downloadStatus === 'loading'
                 ? 'bg-blue-400 cursor-not-allowed'
                 : downloadStatus === 'success'
-                ? 'bg-green-600 hover:bg-green-700'
-                : downloadStatus === 'error'
-                ? 'bg-red-600 hover:bg-red-700'
-                : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
-            } text-white`}
+                  ? 'bg-green-600 hover:bg-green-700'
+                  : downloadStatus === 'error'
+                    ? 'bg-red-600 hover:bg-red-700'
+                    : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
+              } text-white`}
           >
             {downloadStatus === 'loading' ? (
               <>
@@ -325,19 +321,17 @@ Through my experience, I focus on creating clear, structured, and engaging conte
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg shadow-xl transition-all duration-300 overflow-hidden ${
-          mobileMenuOpen ? 'max-h-96 border-t border-slate-100' : 'max-h-0'
-        }`}>
+        <div className={`md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-lg shadow-xl transition-all duration-300 overflow-hidden ${mobileMenuOpen ? 'max-h-96 border-t border-slate-100' : 'max-h-0'
+          }`}>
           <div className="p-4 space-y-2">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
-                  activeSection === item.id 
-                    ? 'bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 border-l-4 border-blue-600' 
+                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${activeSection === item.id
+                    ? 'bg-gradient-to-r from-blue-50 to-indigo-50 text-blue-600 border-l-4 border-blue-600'
                     : 'text-slate-600 hover:bg-slate-50'
-                }`}
+                  }`}
               >
                 <span className={activeSection === item.id ? 'text-blue-600' : ''}>
                   {item.icon}
@@ -345,20 +339,19 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                 <span className="font-medium">{item.label}</span>
               </button>
             ))}
-            
+
             {/* Mobile Download Button */}
             <button
               onClick={handleDownloadResume}
               disabled={downloadStatus === 'loading'}
-              className={`w-full flex items-center justify-center gap-2 mt-4 px-4 py-3 rounded-xl font-medium transition-all ${
-                downloadStatus === 'loading'
+              className={`w-full flex items-center justify-center gap-2 mt-4 px-4 py-3 rounded-xl font-medium transition-all ${downloadStatus === 'loading'
                   ? 'bg-blue-400 text-white cursor-not-allowed'
                   : downloadStatus === 'success'
-                  ? 'bg-green-600 text-white'
-                  : downloadStatus === 'error'
-                  ? 'bg-red-600 text-white'
-                  : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white'
-              }`}
+                    ? 'bg-green-600 text-white'
+                    : downloadStatus === 'error'
+                      ? 'bg-red-600 text-white'
+                      : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white'
+                }`}
             >
               {downloadStatus === 'loading' ? (
                 <>
@@ -388,13 +381,13 @@ Through my experience, I focus on creating clear, structured, and engaging conte
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fadeIn">
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={closeModal}></div>
           <div className="relative bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-slideUp">
-            <button 
+            <button
               onClick={closeModal}
               className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white p-2 rounded-full shadow-lg transition-all hover:scale-110"
             >
               <X size={24} />
             </button>
-            
+
             <div className="p-8">
               {/* Modal Header */}
               <div className="flex items-center gap-4 mb-6">
@@ -419,8 +412,8 @@ Through my experience, I focus on creating clear, structured, and engaging conte
 
               {/* Image */}
               <div className="rounded-2xl overflow-hidden mb-8 shadow-xl">
-                <img 
-                  src={selectedCase.img} 
+                <img
+                  src={selectedCase.img}
                   alt={selectedCase.title}
                   className="w-full h-auto object-cover"
                 />
@@ -453,7 +446,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
 
         <div className="max-w-6xl mx-auto px-6 relative z-10">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-16">
-            
+
             {/* Text Content */}
             <div className="flex-1 text-center lg:text-left space-y-8 animate-slideInLeft">
               <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium animate-bounce-slow">
@@ -461,7 +454,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                 SEO Content Writer & Strategist
                 <Sparkles size={16} />
               </div>
-              
+
               <h1 className="text-5xl lg:text-7xl font-extrabold">
                 <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent animate-gradient">
                   AJAY TUKARAM
@@ -469,20 +462,20 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                 <br />
                 <span className="text-slate-900">YANGAL</span>
               </h1>
-              
+
               <p className="text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed animate-fadeInUp">
                 {bioText.split('.')[0]}. Creating content that ranks, engages, and converts.
               </p>
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fadeInUp animation-delay-200">
-                <button 
+                <button
                   onClick={() => scrollToSection('work')}
                   className="group bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition-all hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-2"
                 >
                   View My Work <ArrowUpRight size={20} className="group-hover:rotate-45 transition-transform" />
                 </button>
-                <button 
+                <button
                   onClick={() => scrollToSection('contact')}
                   className="group bg-white text-slate-900 px-8 py-4 rounded-full font-medium hover:bg-slate-50 transition-all hover:scale-105 shadow-lg hover:shadow-xl border border-slate-200 flex items-center gap-2"
                 >
@@ -492,8 +485,8 @@ Through my experience, I focus on creating clear, structured, and engaging conte
 
               {/* Contact Info */}
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start text-sm text-slate-600 pt-4">
-                <a href="mailto:ajayyangal4900@gmail.com" className="flex items-center gap-2 hover:text-blue-600 transition-colors group">
-                  <Mail size={16} className="group-hover:scale-110 transition-transform" /> ajayyangal4900@gmail.com
+                <a href="mailto:ajayyangal07@gmail.com" className="flex items-center gap-2 hover:text-blue-600 transition-colors group">
+                  <Mail size={16} className="group-hover:scale-110 transition-transform" /> ajayyangal07@gmail.com
                 </a>
                 <a href="tel:+918010697161" className="flex items-center gap-2 hover:text-blue-600 transition-colors group">
                   <Phone size={16} className="group-hover:scale-110 transition-transform" /> +91 8010697161
@@ -518,7 +511,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                     className="w-full h-full object-cover"
                   />
                 </div>
-                
+
                 {/* Floating Badges */}
                 <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-2xl shadow-xl animate-float animation-delay-1000">
                   <div className="flex items-center gap-2">
@@ -531,7 +524,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="absolute -top-4 -right-4 bg-white p-4 rounded-2xl shadow-xl animate-float animation-delay-2000">
                   <div className="flex items-center gap-2">
                     <div className="bg-blue-100 p-2 rounded-lg">
@@ -566,7 +559,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
             <p className="text-slate-700 leading-relaxed text-lg">
               {bioText}
             </p>
-            
+
             {/* Stats Row */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8 pt-8 border-t border-slate-100">
               {achievements.map((item, index) => (
@@ -585,7 +578,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
         {/* ---------------- EXPERIENCE SECTION ---------------- */}
         <section id="experience" ref={experienceRef} className="scroll-mt-20">
           <div className="grid lg:grid-cols-2 gap-16">
-            
+
             {/* Experience Section with Timeline */}
             <div className="space-y-8">
               <div className="flex items-center gap-4">
@@ -596,7 +589,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
               </div>
 
               <div className="space-y-8 relative before:absolute before:inset-0 before:ml-8 before:w-0.5 before:bg-gradient-to-b before:from-blue-200 before:via-blue-400 before:to-transparent">
-                
+
                 {/* Job 1 */}
                 <div className="relative flex gap-6 group animate-slideInLeft animation-delay-100">
                   <div className="relative">
@@ -692,7 +685,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
 
             {/* Achievements & Skills Section */}
             <div className="space-y-12">
-              
+
               {/* Key Achievements */}
               <div className="bg-white p-8 rounded-3xl shadow-xl border border-slate-100 hover:shadow-2xl transition-all">
                 <div className="flex items-center gap-4 mb-6">
@@ -741,9 +734,9 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                     'Realme GT 7 / GT 7T – Antutu Score & Review',
                     'Realme GT 7 vs IQOO Neo 10 – Comparison'
                   ].map((article, index) => (
-                    <a 
+                    <a
                       key={index}
-                      href="#" 
+                      href="#"
                       className="flex items-center gap-3 p-3 bg-slate-50 hover:bg-blue-50 rounded-xl transition-all group"
                     >
                       <ExternalLink size={16} className="text-blue-400 group-hover:rotate-12 transition-transform" />
@@ -767,7 +760,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                         <span className="text-sm text-blue-600 font-bold">{skill.level}%</span>
                       </div>
                       <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
-                        <div 
+                        <div
                           className="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-1000"
                           style={{ width: `${skill.level}%` }}
                         ></div>
@@ -828,8 +821,8 @@ Through my experience, I focus on creating clear, structured, and engaging conte
           {/* Case Studies Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((study, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 onClick={() => openModal(study)}
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl border border-slate-100 transition-all duration-500 cursor-pointer animate-fadeInUp"
                 style={{ animationDelay: `${index * 100}ms` }}
@@ -841,25 +834,25 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
+
                   {/* Overlay with view button */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform group-hover:scale-100 scale-90">
                     <button className="bg-white text-slate-900 px-6 py-3 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-all shadow-xl flex items-center gap-2">
                       <Eye size={18} /> View Case Study
                     </button>
                   </div>
-                  
+
                   {/* Badge */}
                   <div className="absolute top-4 left-4 bg-blue-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
                     Case #{study.id}
                   </div>
-                  
+
                   {/* Time badge */}
                   <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm text-slate-700 text-xs font-medium px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1">
                     <Clock size={12} /> {study.metrics.time}
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
                     {study.title}
@@ -867,7 +860,7 @@ Through my experience, I focus on creating clear, structured, and engaging conte
                   <p className="text-slate-600 text-sm mb-4">
                     {study.result}
                   </p>
-                  
+
                   {/* Metrics preview */}
                   <div className="flex items-center gap-4 text-xs text-slate-500">
                     <span className="flex items-center gap-1">
@@ -896,14 +889,14 @@ Through my experience, I focus on creating clear, structured, and engaging conte
         </section>
 
         {/* ---------------- CONTACT SECTION ---------------- */}
-        <section id="contact" ref={contactRef} className="scroll-mt-20 text-center">
+        {/* <section id="contact" ref={contactRef} className="scroll-mt-20 text-center">
           <h2 className="text-4xl font-bold text-slate-900 mb-4">Let's Work Together</h2>
           <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
             Have a project in mind? Let's create content that ranks and converts.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="mailto:ajayyangal4900@gmail.com"
+              href="mailto:ajayyangal07@gmail.com"
               className="group bg-blue-600 text-white px-8 py-4 rounded-full font-medium hover:bg-blue-700 transition-all hover:scale-105 shadow-xl hover:shadow-2xl flex items-center gap-2"
             >
               <Mail size={20} /> Send Email
@@ -917,21 +910,80 @@ Through my experience, I focus on creating clear, structured, and engaging conte
               <Globe size={20} /> Visit TechSCR
             </a>
           </div>
+        </section> */}
+
+        {/* ---------------- CONTACT SECTION ---------------- */}
+        <section id="contact" ref={contactRef} className="scroll-mt-20 text-center">
+          <h2 className="text-4xl font-bold text-slate-900 mb-4">Let's Work Together</h2>
+          <p className="text-slate-600 mb-8 max-w-2xl mx-auto">
+            Have a project in mind? Let's create content that ranks and converts.
+          </p>
+
+          {/* Contact Info Cards */}
+          <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 mb-10 max-w-3xl mx-auto">
+            {/* Email Card */}
+            <a
+              href="mailto:ajayyangal07@gmail.com"
+              className="group flex-1 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border border-slate-100 transition-all duration-300 hover:scale-105 hover:border-blue-200"
+            >
+              <div className="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition-all duration-300">
+                <Mail size={32} className="text-blue-600 group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Email Me</h3>
+              <p className="text-blue-600 text-sm break-all">ajayyangal07@gmail.com</p>
+            </a>
+
+            {/* Phone Card */}
+            <a
+              href="tel:+918010697161"
+              className="group flex-1 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border border-slate-100 transition-all duration-300 hover:scale-105 hover:border-green-200"
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-600 transition-all duration-300">
+                <Phone size={32} className="text-green-600 group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Call Me</h3>
+              <p className="text-green-600 text-lg font-bold">+91 8010697161</p>
+            </a>
+
+            {/* Website Card */}
+            <a
+              href="https://techscr.com"
+              target="_blank"
+              rel="noreferrer"
+              className="group flex-1 bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl border border-slate-100 transition-all duration-300 hover:scale-105 hover:border-purple-200"
+            >
+              <div className="bg-purple-100 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-600 transition-all duration-300">
+                <Globe size={32} className="text-purple-600 group-hover:text-white transition-colors duration-300" />
+              </div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Visit Website</h3>
+              <p className="text-purple-600 text-sm font-medium">techscr.com</p>
+            </a>
+          </div>
+
+          {/* Optional: Add a direct contact line */}
+          {/* <div className="text-sm text-slate-500">
+            <span className="inline-flex items-center gap-2">
+              <Clock size={14} /> Available Mon-Fri, 9AM - 6PM IST
+            </span>
+          </div> */}
         </section>
+
+
+
       </main>
 
       {/* Footer */}
       <footer className="bg-slate-900 text-slate-400 py-12 mt-20">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <button 
+            <button
               onClick={() => scrollToSection('home')}
               className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent hover:scale-105 transition-transform"
             >
               AY.
             </button>
             <div className="flex gap-6">
-              <a href="mailto:ajayyangal4900@gmail.com" className="hover:text-white transition-colors">
+              <a href="mailto:ajayyangal07@gmail.com" className="hover:text-white transition-colors">
                 <Mail size={20} />
               </a>
               <a href="https://techscr.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">
